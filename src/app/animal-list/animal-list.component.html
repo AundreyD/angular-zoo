@@ -1,16 +1,30 @@
+<h1>Vertabrates</h1>
 <table class="table table-striped">
   <thead>
     <tr>
       <th>Firstname</th>
-      <th>Lastname</th>
-      <th>Email</th>
+      <th>Description</th>
     </tr>
   </thead>
-  <tbody *ngFor="let blah of this.animals.zooAnimals">
-    <tr>
+  <tbody *ngFor="let blah of this.animals.zooAnimals" >
+    <tr *ngIf="blah.classification == 'vertabrate'">
       <td>{{blah.name}}</td>
-      <td>Doe</td>
       <td>{{blah.description}}</td>
     </tr>
   </tbody>
 </table>
+<h1>Non-Vertabrates</h1>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let blah of this.animals.zooAnimals">
+      <tr *ngIf="blah.classification == 'non-vertabrate'">
+        <td>{{blah.name}}</td>
+        <td>{{blah.description}}</td>
+      </tr>
+    </tbody>
+  </table>

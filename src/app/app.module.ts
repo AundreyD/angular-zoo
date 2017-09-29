@@ -9,7 +9,8 @@ import { AnimalFormComponent } from './animal-form/animal-form.component';
 import { AnimalListComponent } from './animal-list/animal-list.component';
 import { AnimalBlocksComponent } from './animal-blocks/animal-blocks.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import {ZooService} from './zoo.service'
+import {ZooService} from './zoo.service';
+import { SortByPipe } from './sort-by.pipe'
 const appRoutes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: 'home', component: AnimalFormComponent },
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
     AnimalListComponent,
     AnimalBlocksComponent,
     PageNotFoundComponent,
+    SortByPipe,
   ],
   imports: [
     RouterModule.forRoot(
