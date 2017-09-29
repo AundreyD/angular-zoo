@@ -1,0 +1,20 @@
+<div class="container everything">
+  <div *ngFor="let ani of this.animals.zooAnimals" >
+      <div class="card" style="width: 20rem;" *ngIf="ani.quantity !== 0" >
+          <img class="card-img-top img" src="{{ani.imagePath}}" alt="Card image cap">
+          <div class="card-block">
+            <h3 class="card-title">{{ani.name}}</h3>
+            <h5>Species: {{ani.species}}</h5>
+            <h5>Height: {{ani.averageHeight}} inches</h5>
+            <h5>Weight: {{ani.averageWeight}} pounds</h5>
+            <h5>Classification: {{ani.classification}}</h5>
+            <h5>Description:{{ani.description}}</h5>
+            <div>
+              <button class="btn btn-success" (click)="quantityUp(ani)"> + </button>
+              <h5 >Quantity: {{ani.quantity }} </h5>
+              <button class="btn btn-danger" (click)="quantityDown(ani)"> - </button>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
